@@ -946,28 +946,27 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
 
 /* ============================================================ rich technical arsenal */
 #pathways .arsenal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch;margin-top:clamp(32px,5vh,52px)}
-#pathways .arsenal-card{display:flex;flex-direction:column;min-height:380px;transform:none;outline:0;cursor:pointer}
-#pathways .arsenal-card .arsenal-fr{height:100%;aspect-ratio:auto;display:flex;flex-direction:column;overflow:visible;position:relative;border:1px solid rgba(223,231,224,.16);border-radius:6px;padding:24px;background:linear-gradient(145deg,rgba(28,43,48,.82),rgba(5,7,10,.94)) !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 24px 70px -42px rgba(0,0,0,.95);transition:transform .5s var(--ease-out),border-color .35s,box-shadow .5s,background .5s}
-#pathways .arsenal-card:nth-child(2) .arsenal-fr{background:linear-gradient(145deg,rgba(28,37,55,.82),rgba(5,7,10,.94)) !important}
-#pathways .arsenal-card:nth-child(3) .arsenal-fr{background:linear-gradient(145deg,rgba(46,30,42,.82),rgba(5,7,10,.94)) !important}
-#pathways .arsenal-card .arsenal-fr::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 84% 18%,rgba(224,35,28,.14),transparent 44%);pointer-events:none;opacity:.65;transition:opacity .4s;border-radius:6px}
+#pathways .arsenal-card{display:flex;flex-direction:column;height:auto;min-height:0;transform:none;outline:0;cursor:pointer}
+#pathways .arsenal-card .arsenal-fr{display:flex;flex-direction:column;height:100%;min-height:0;aspect-ratio:auto;overflow:visible;position:relative;border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:26px 24px 22px;background:linear-gradient(145deg,rgba(22,27,34,.88),rgba(10,13,18,.96)) !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 20px 40px -20px rgba(0,0,0,.8);transition:transform .4s var(--ease-out),border-color .3s,box-shadow .4s}
+#pathways .arsenal-card:nth-child(2) .arsenal-fr{background:linear-gradient(145deg,rgba(24,30,42,.88),rgba(10,13,18,.96)) !important}
+#pathways .arsenal-card:nth-child(3) .arsenal-fr{background:linear-gradient(145deg,rgba(32,24,34,.88),rgba(10,13,18,.96)) !important}
+#pathways .arsenal-card .arsenal-fr::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 84% 18%,rgba(224,35,28,.14),transparent 44%);pointer-events:none;opacity:.65;transition:opacity .4s;border-radius:10px}
 #pathways .arsenal-card .arsenal-fr::after{display:none}
-.arsenal-icon{position:absolute;top:22px;right:22px;width:36px;height:36px;color:var(--ember);opacity:.62;filter:drop-shadow(0 0 12px rgba(224,35,28,.22));transition:transform .5s var(--ease-out),color .35s}
+.arsenal-icon{position:absolute;top:22px;right:22px;width:34px;height:34px;color:var(--ember);opacity:.55;filter:drop-shadow(0 0 12px rgba(224,35,28,.22));transition:transform .4s var(--ease-out),color .3s}
 .arsenal-icon svg{width:100%;height:100%}
-/* Card header: title + number at top */
-#pathways .arsenal-card .card-lab{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0;margin-bottom:6px}
-.arsenal-card .card-lab b{font-size:15px;line-height:1.24;letter-spacing:.07em;text-transform:uppercase}
-.arsenal-card .card-lab .jp{font-size:12px;color:var(--ember);letter-spacing:.16em;font-weight:600}
-/* Description: always visible, directly below title */
-.arsenal-detail{position:relative;z-index:2;max-height:none;overflow:visible;opacity:1;transform:none;padding:0}
-.arsenal-detail p{margin:0 0 18px;color:#b2beba;font-size:12.5px;line-height:1.65}
-/* Skill badges: always visible, high-contrast monospace */
-.skill-pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
-.skill-pills span{padding:4px 12px;border:1px solid rgba(255,255,255,.10);border-radius:5px;background:rgba(255,255,255,.08);color:#dce4de;font-family:'Courier New',Consolas,'Lucida Console',monospace;font-size:11px;letter-spacing:.03em;line-height:1.3;white-space:nowrap;transition:border-color .25s,background .25s,color .25s}
-.skill-pills span:hover{border-color:rgba(224,35,28,.65);background:rgba(224,35,28,.18);color:#fff}
-/* Tagline pinned to card bottom */
-#pathways .arsenal-card .card-meta{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding:14px 0 0;border-top:1px solid rgba(255,255,255,.06);color:#9aa09d;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:400;transition:color .3s}
-#pathways .arsenal-card:hover .arsenal-fr,#pathways .arsenal-card:focus-visible .arsenal-fr,#pathways .arsenal-card.is-active .arsenal-fr{transform:translateY(-5px);border-color:rgba(224,35,28,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 30px 80px -34px rgba(224,35,28,.24)}
+/* Header: Category name and number */
+#pathways .arsenal-card .card-lab{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0;margin:0 0 4px}
+#pathways .arsenal-card .card-lab h3,#pathways .arsenal-card .card-lab b{font-size:18px;font-weight:700;color:#ffffff;letter-spacing:.025em;line-height:1.25;margin:0;text-transform:uppercase}
+#pathways .arsenal-card .card-lab .jp{font-size:12px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-weight:600;color:var(--ember);letter-spacing:.12em}
+/* Description: 1-sentence summary */
+#pathways .arsenal-card .arsenal-desc{position:relative;z-index:2;font-size:14px;color:#d4d4d4;line-height:1.55;margin:8px 0 0}
+/* Skills Badges: visible wrapping container */
+#pathways .arsenal-card .skill-pills{position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 20px;padding:0}
+#pathways .arsenal-card .skill-pills span{background:rgba(255,255,255,.10);color:#f5f5f5;border:1px solid rgba(255,255,255,.20);padding:6px 12px;font-size:12px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;border-radius:6px;box-shadow:0 1px 2px rgba(0,0,0,.05);white-space:nowrap;line-height:1.3;transition:border-color .2s,background .2s,color .2s}
+#pathways .arsenal-card .skill-pills span:hover{border-color:rgba(224,35,28,.65);background:rgba(224,35,28,.22);color:#ffffff}
+/* Tagline: pinned to bottom */
+#pathways .arsenal-card .card-meta{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.10);font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#a3a3a3;font-weight:400;transition:color .3s}
+#pathways .arsenal-card:hover .arsenal-fr,#pathways .arsenal-card:focus-visible .arsenal-fr,#pathways .arsenal-card.is-active .arsenal-fr{transform:translateY(-4px);border-color:rgba(224,35,28,.55);box-shadow:inset 0 1px 0 rgba(255,255,255,.10),0 24px 60px -24px rgba(224,35,28,.25)}
 #pathways .arsenal-card:hover .arsenal-icon,#pathways .arsenal-card:focus-visible .arsenal-icon,#pathways .arsenal-card.is-active .arsenal-icon{transform:scale(1.06) rotate(-3deg);color:#ff7667}
 #pathways .arsenal-card:hover .card-meta,#pathways .arsenal-card:focus-visible .card-meta,#pathways .arsenal-card.is-active .card-meta{color:var(--bone)}
 
@@ -1326,8 +1325,8 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
   </div>
   <div class="cards arsenal-grid" id="cards">
     <!-- Pillar 01: MACHINE LEARNING & DATA -->
-    <article class="card arsenal-card" data-rv="up" data-view="0" data-cursor tabindex="0" aria-label="Pillar 01: Machine Learning and Data">
-      <div class="card-fr arsenal-fr">
+    <article class="card arsenal-card flex flex-col cursor-pointer" data-rv="up" data-cursor tabindex="0" aria-label="Pillar 01: Machine Learning and Data">
+      <div class="card-fr arsenal-fr flex flex-col h-full relative">
         <span class="arsenal-icon" aria-hidden="true">
           <svg viewBox="0 0 48 48" fill="none">
             <path d="M8 36L18 24L26 30L40 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1338,32 +1337,30 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
             <path d="M18 24V14M26 30V40M8 36H4M40 12H44" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 2" stroke-linecap="round"/>
           </svg>
         </span>
-        <div class="card-lab">
-          <b>MACHINE LEARNING &amp; DATA</b>
-          <span class="jp">01 / 03</span>
+        <div class="card-lab flex items-center justify-between gap-3">
+          <h3 class="text-lg font-bold text-white tracking-wide">MACHINE LEARNING &amp; DATA</h3>
+          <span class="jp text-xs font-mono font-semibold">01 / 03</span>
         </div>
-        <div class="arsenal-detail">
-          <p>Statistical modeling, computer vision, and high-throughput data processing.</p>
-          <div class="skill-pills">
-            <span>Python</span>
-            <span>SQL</span>
-            <span>C++</span>
-            <span>Pandas</span>
-            <span>NumPy</span>
-            <span>Scikit-learn</span>
-            <span>XGBoost</span>
-            <span>YOLO</span>
-          </div>
+        <p class="arsenal-desc text-sm text-neutral-300 mt-2">Statistical modeling, predictive analytics, and high-throughput data processing.</p>
+        <div class="skill-pills flex flex-wrap gap-2 my-5">
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">Python</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">SQL</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">C++</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">Pandas</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">NumPy</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">Scikit-learn</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">XGBoost</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">YOLO</span>
         </div>
-        <div class="card-meta">
+        <div class="card-meta text-[11px] uppercase tracking-widest text-neutral-400 border-t border-white/10 pt-3 mt-auto">
           <span>MODELS WITH MEASURABLE SIGNAL</span>
         </div>
       </div>
     </article>
 
     <!-- Pillar 02: FULL-STACK & SYSTEMS -->
-    <article class="card arsenal-card" data-rv="up" data-view="1" data-cursor tabindex="0" aria-label="Pillar 02: Full-Stack and Systems">
-      <div class="card-fr arsenal-fr">
+    <article class="card arsenal-card flex flex-col cursor-pointer" data-rv="up" data-cursor tabindex="0" aria-label="Pillar 02: Full-Stack and Systems">
+      <div class="card-fr arsenal-fr flex flex-col h-full relative">
         <span class="arsenal-icon" aria-hidden="true">
           <svg viewBox="0 0 48 48" fill="none">
             <rect x="6" y="8" width="36" height="12" rx="3" stroke="currentColor" stroke-width="2.2"/>
@@ -1372,31 +1369,29 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
             <path d="M24 20v4M14 20v4M34 20v4" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 2"/>
           </svg>
         </span>
-        <div class="card-lab">
-          <b>FULL-STACK &amp; SYSTEMS</b>
-          <span class="jp">02 / 03</span>
+        <div class="card-lab flex items-center justify-between gap-3">
+          <h3 class="text-lg font-bold text-white tracking-wide">FULL-STACK &amp; SYSTEMS</h3>
+          <span class="jp text-xs font-mono font-semibold">02 / 03</span>
         </div>
-        <div class="arsenal-detail">
-          <p>Scalable APIs, normalized relational databases, and modern reactive interfaces.</p>
-          <div class="skill-pills">
-            <span>FastAPI</span>
-            <span>PostgreSQL</span>
-            <span>React</span>
-            <span>Next.js</span>
-            <span>Node.js</span>
-            <span>Supabase</span>
-            <span>Tailwind CSS</span>
-          </div>
+        <p class="arsenal-desc text-sm text-neutral-300 mt-2">Scalable APIs, normalized relational databases, and modern reactive interfaces.</p>
+        <div class="skill-pills flex flex-wrap gap-2 my-5">
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">FastAPI</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">PostgreSQL</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">React</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">Next.js</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">Node.js</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">Supabase</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">Tailwind CSS</span>
         </div>
-        <div class="card-meta">
+        <div class="card-meta text-[11px] uppercase tracking-widest text-neutral-400 border-t border-white/10 pt-3 mt-auto">
           <span>STRUCTURED FOR SCALE</span>
         </div>
       </div>
     </article>
 
     <!-- Pillar 03: CLOUD, AI & DEPLOYMENT -->
-    <article class="card arsenal-card" data-rv="up" data-view="2" data-cursor tabindex="0" aria-label="Pillar 03: Cloud, AI and Deployment">
-      <div class="card-fr arsenal-fr">
+    <article class="card arsenal-card flex flex-col cursor-pointer" data-rv="up" data-cursor tabindex="0" aria-label="Pillar 03: Cloud, AI and Deployment">
+      <div class="card-fr arsenal-fr flex flex-col h-full relative">
         <span class="arsenal-icon" aria-hidden="true">
           <svg viewBox="0 0 48 48" fill="none">
             <path d="M14 34h20a8 8 0 0 0 1-15.9A13 13 0 0 0 12 16a9 9 0 0 0 2 18Z" stroke="currentColor" stroke-width="2.2"/>
@@ -1404,22 +1399,20 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
             <path d="M24 12V6M24 42v-6M12 24H6M42 24h-6M15 15l-4-4M37 37l-4-4M37 15l-4 4M15 37l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </span>
-        <div class="card-lab">
-          <b>CLOUD, AI &amp; DEPLOYMENT</b>
-          <span class="jp">03 / 03</span>
+        <div class="card-lab flex items-center justify-between gap-3">
+          <h3 class="text-lg font-bold text-white tracking-wide">CLOUD, AI &amp; DEPLOYMENT</h3>
+          <span class="jp text-xs font-mono font-semibold">03 / 03</span>
         </div>
-        <div class="arsenal-detail">
-          <p>Serverless execution, multimodal AI orchestration, and automated delivery pipelines.</p>
-          <div class="skill-pills">
-            <span>AWS Lambda</span>
-            <span>Google Cloud</span>
-            <span>Gemini API</span>
-            <span>Vertex AI</span>
-            <span>Git / GitHub</span>
-            <span>Docker</span>
-          </div>
+        <p class="arsenal-desc text-sm text-neutral-300 mt-2">Serverless execution, multimodal AI orchestration, and automated delivery pipelines.</p>
+        <div class="skill-pills flex flex-wrap gap-2 my-5">
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">AWS Lambda</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">Google Cloud</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">Gemini API</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">Vertex AI</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">Git / GitHub</span>
+          <span class="bg-white/10 text-neutral-100 border border-white/20 px-3 py-1.5 text-xs font-mono rounded-md shadow-sm">Docker</span>
         </div>
-        <div class="card-meta">
+        <div class="card-meta text-[11px] uppercase tracking-widest text-neutral-400 border-t border-white/10 pt-3 mt-auto">
           <span>SHIP, OBSERVE, SCALE</span>
         </div>
       </div>
@@ -1454,7 +1447,7 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
     <div class="les" data-les="1" data-cursor><span class="k">02</span><h3>Web Development Intern @ Prodigy InfoTech<em class="jp">INTERNSHIP</em></h3><p>Built responsive React and Tailwind components across 12+ web pages with code splitting and lazy loading.</p><span class="t">12+ pages</span><i class="bar"></i></div>
     <div class="les" data-les="2" data-cursor><span class="k">03</span><h3>Open-Source Programs<em class="jp">COMMUNITY</em></h3><p>Contributor across Elite Coders, Code Social, NSoC, and Open Source Connect Global with 40+ commits.</p><span class="t">40+ commits</span><i class="bar"></i></div>
     <div class="les" data-les="3" data-cursor><span class="k">04</span><h3>Hackathons &amp; Recognition<em class="jp">BUILD</em></h3><p>Shortlisted for AI for Bharat, Round 3 Ctrl+Space Hackathon, PromptWars, and TechFest-2K26 Webathon.</p><span class="t">4 shortlists</span><i class="bar"></i></div>
-    <div class="les" data-les="4" data-cursor><span class="k">05</span><h3>Echo — Multi-Agent Voice &amp; Audio Intelligence<em class="jp">AI SYSTEMS</em></h3><p>Designed and engineered an autonomous multi-agent voice processing pipeline featuring low-latency streaming audio inference and contextual tool calling.</p><span class="t">Autonomous Pipeline</span><i class="bar"></i></div>
+    <div class="les" data-les="4" data-cursor><span class="k">05</span><h3>Echo — Multi-Agent Voice &amp; Audio Intelligence<em class="jp">AI SYSTEMS</em></h3><p>Engineered an autonomous multi-agent voice processing pipeline featuring low-latency streaming audio inference and contextual tool execution.</p><span class="t">Autonomous Pipeline</span><i class="bar"></i></div>
   </div>
 </section>
 
