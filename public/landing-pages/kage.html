@@ -531,7 +531,7 @@ h1,h2,h3{ font-weight:400; margin:0; letter-spacing:-.005em; }
      16.11:1 to 16.08:1, all far past what either needs. It was darkening the
      approach, the gate and the lower steps to buy half a point of contrast
      nobody was short of. */
-body[data-layout-hero="b"] .hero-top{ margin-left:0; max-width:min(590px,46vw); }
+body[data-layout-hero="b"] .hero-top{ margin-left:0; max-width:min(780px,56vw); }
 body[data-layout-hero="b"] .hero-foot{ width:min(480px,40vw); margin-left:0; }
 body[data-layout-hero="b"] .hero-cue{ justify-content:flex-start; }
 body[data-layout-hero="b"] .chapters{ grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
@@ -883,37 +883,132 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
 }
 
 /* ============================================================ Arya portfolio layer */
-.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:clamp(54px,8vh,104px)}
-.project-card{position:relative;min-height:245px;padding:24px;border:1px solid rgba(223,231,224,.14);background:linear-gradient(145deg,rgba(26,35,39,.72),rgba(5,7,10,.72));box-shadow:0 24px 60px -40px rgba(0,0,0,.9);transition:transform .5s var(--ease-out),border-color .4s,background .4s}
-.project-card:hover{transform:translateY(-5px);border-color:rgba(224,35,28,.72);background:linear-gradient(145deg,rgba(49,31,34,.82),rgba(5,7,10,.80))}
-.project-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:34px;color:var(--muted);font-size:10px;letter-spacing:.2em;text-transform:uppercase}
-.project-top a{color:var(--bone);font-size:18px;letter-spacing:0;transition:transform .35s var(--ease-out),color .3s}.project-top a:hover{color:var(--ember);transform:translate(3px,-3px)}
-.project-status{color:var(--ember);font-size:9px}.project-card h3{margin:0 0 10px;font-size:clamp(19px,2vw,28px);font-weight:400;letter-spacing:-.03em}.project-card p{margin:0;max-width:52ch;color:#aab4ad;font-size:13px;line-height:1.7}.badges{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}.badges span{padding:6px 9px;border:1px solid rgba(223,231,224,.14);color:var(--bone-dim);font-size:9px;letter-spacing:.12em;text-transform:uppercase}.arsenal-fr{background:linear-gradient(145deg,rgba(27,45,50,.88),rgba(8,11,14,.9)) !important}.cards .card:nth-child(4) .arsenal-fr{background:linear-gradient(145deg,rgba(50,28,34,.88),rgba(8,11,14,.9)) !important}.cards .card:nth-child(5) .arsenal-fr{background:linear-gradient(145deg,rgba(38,34,25,.88),rgba(8,11,14,.9)) !important}.cards .card-meta span:first-child{max-width:24ch}.foot-brand p{max-width:34ch}
-@media(max-width:760px){.project-grid{grid-template-columns:1fr;gap:12px;margin-top:46px}.project-card{min-height:0;padding:20px}.project-top{margin-bottom:24px}.project-card p{font-size:12px}.badges{margin-top:18px}.brand-tx i{letter-spacing:.18em}}
+.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:clamp(46px,6vh,72px)}
+.project-card{position:relative;display:flex;flex-direction:column;min-height:280px;padding:26px;border:1px solid rgba(223,231,224,.14);background:linear-gradient(145deg,rgba(26,35,39,.72),rgba(5,7,10,.82));box-shadow:0 24px 60px -40px rgba(0,0,0,.9);transition:transform .5s var(--ease-out),border-color .4s,background .4s,box-shadow .4s}
+.project-card:hover{transform:translateY(-5px);border-color:rgba(224,35,28,.72);background:linear-gradient(145deg,rgba(49,31,34,.84),rgba(5,7,10,.84));box-shadow:0 30px 70px -36px rgba(224,35,28,.28)}
+.project-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px;color:var(--muted);font-size:10px;letter-spacing:.2em;text-transform:uppercase}
+.project-corner-links{display:inline-flex;align-items:center;gap:12px;margin-left:auto}
+.project-corner-links a{color:var(--bone-dim);display:flex;align-items:center;transition:color .3s,transform .3s var(--ease-out)}
+.project-corner-links a:hover{color:var(--ember);transform:translateY(-2px) scale(1.1)}
+.project-status{color:var(--ember);font-size:9px;font-weight:500;letter-spacing:.14em}
+.project-card h3{margin:0 0 10px;font-size:clamp(19px,2vw,28px);font-weight:400;letter-spacing:-.03em}
+.project-card p{margin:0;max-width:54ch;color:#aab4ad;font-size:13px;line-height:1.7}
+.project-category{margin-bottom:10px;color:var(--ember);font-size:10px;letter-spacing:.15em;text-transform:uppercase}
+.project-impact{margin-top:14px;color:var(--bone-dim);font-size:11px;line-height:1.55}
+.project-impact::first-letter{color:var(--ember)}
+.badges{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.badges span{padding:5px 9px;border:1px solid rgba(223,231,224,.14);background:rgba(3,6,9,.45);color:var(--bone-dim);font-size:9px;letter-spacing:.12em;text-transform:uppercase;border-radius:2px}
 
-.project-category{margin-bottom:10px;color:var(--ember);font-size:10px;letter-spacing:.15em;text-transform:uppercase}.project-impact{margin-top:16px;color:var(--bone-dim);font-size:11px;line-height:1.55}.project-impact::first-letter{color:var(--ember)}
+/* Project Actions & Minimalist Glassmorphic Buttons */
+.project-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:auto;padding-top:20px;border-top:1px solid rgba(223,231,224,.08);position:relative;z-index:10}
+.proj-action-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 15px;border:1px solid rgba(223,231,224,.14);border-radius:999px;background:rgba(9,13,16,.65);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#8e9a93;font-size:10.5px;font-weight:400;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;pointer-events:auto;position:relative;z-index:12;transition:color .25s var(--ease-out),border-color .25s var(--ease-out),background .25s var(--ease-out),transform .25s var(--ease-out),box-shadow .25s var(--ease-out)}
+.proj-action-btn:hover{color:#ffffff;border-color:rgba(224,35,28,.65);background:rgba(224,35,28,.15);transform:translateY(-2px);box-shadow:0 4px 16px rgba(224,35,28,.22)}
+.proj-action-btn:active{transform:translateY(0)}
+.proj-action-btn svg{display:inline-block;width:10px;height:10px;flex-shrink:0;transition:transform .25s var(--ease-out)}
+.proj-action-btn:hover svg{transform:translate(1.5px,-1.5px)}
+.proj-action-btn-demo{border-color:rgba(223,231,224,.16)}
+
+@media(max-width:760px){
+  .project-grid{grid-template-columns:1fr;gap:14px;margin-top:36px}
+  .project-card{min-height:0;padding:20px}
+  .project-top{margin-bottom:18px}
+  .project-card p{font-size:12.5px}
+  .badges{margin-top:14px}
+  .brand-tx i{letter-spacing:.18em}
+}
+
+/* Chapter Subheading Styles */
+.sec-subhead{display:block;margin-top:8px;color:var(--ember);font-size:clamp(12px,1.15vw,15px);font-weight:400;letter-spacing:.14em;text-transform:uppercase}
+.chapter-header-block{margin-bottom:clamp(20px,3vh,34px)}
+
+/* Hero Backdrop Panel & Primary Action Buttons */
+.hero-panel{background:rgba(0,0,0,.50);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:24px;border-radius:16px;border:1px solid rgba(255,255,255,.10);box-shadow:0 24px 60px -16px rgba(0,0,0,.75);max-width:768px;width:100%}
+.hero-panel .eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.hero-panel .eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--vermilion);box-shadow:0 0 10px var(--vermilion)}
+.hero-panel .hero-sub{margin-top:14px;max-width:54ch;color:#aab4ad;font-size:13.5px;line-height:1.68;text-shadow:0 1px 16px rgba(0,0,0,.95)}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:11px;margin-top:22px;position:relative;z-index:10}
+.hero-btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:9.5px 18px;border-radius:999px;font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;pointer-events:auto;transition:color .25s var(--ease-out),border-color .25s var(--ease-out),background .25s var(--ease-out),transform .25s var(--ease-out),box-shadow .25s var(--ease-out)}
+.hero-btn-primary{background:var(--vermilion);color:#ffffff;border:1px solid var(--vermilion);box-shadow:0 4px 18px rgba(224,35,28,.35)}
+.hero-btn-primary:hover{background:#ff3830;border-color:#ff3830;color:#ffffff;transform:translateY(-2px);box-shadow:0 6px 24px rgba(224,35,28,.5)}
+.hero-btn-secondary{background:rgba(9,13,16,.65);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#dfe7e0;border:1px solid rgba(223,231,224,.18)}
+.hero-btn-secondary:hover{color:#ffffff;border-color:rgba(224,35,28,.65);background:rgba(224,35,28,.16);transform:translateY(-2px);box-shadow:0 4px 16px rgba(224,35,28,.22)}
+.hero-btn-tertiary{background:rgba(9,13,16,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#8e9a93;border:1px solid rgba(223,231,224,.14)}
+.hero-btn-tertiary:hover{color:#ffffff;border-color:rgba(223,231,224,.36);background:rgba(255,255,255,.08);transform:translateY(-2px)}
+.hero-btn:active{transform:translateY(0)}
+@media(max-width:1080px){
+  .hero-panel{max-width:none}
+}
+@media(max-width:640px){
+  .hero-panel{padding:18px 16px;border-radius:14px}
+  .hero-actions{gap:9px}
+  .hero-btn{font-size:10px;padding:8px 14px}
+}
 
 /* ============================================================ rich technical arsenal */
-#pathways .arsenal-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:none;gap:16px;align-items:stretch}
+#pathways .arsenal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:stretch;margin-top:clamp(32px,5vh,52px)}
 #pathways .arsenal-card{display:flex;flex-direction:column;min-height:0;transform:none;outline:0;cursor:pointer}
-#pathways .arsenal-card .arsenal-fr{height:268px;min-height:268px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;border:1px solid rgba(223,231,224,.16);border-radius:2px;background:linear-gradient(145deg,rgba(28,43,48,.76),rgba(5,7,10,.92)) !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 24px 70px -42px rgba(0,0,0,.95);transition:transform .5s var(--ease-out),border-color .35s,box-shadow .5s,background .5s}
-#pathways .arsenal-card:nth-child(2) .arsenal-fr{background:linear-gradient(145deg,rgba(28,37,55,.78),rgba(5,7,10,.92)) !important}#pathways .arsenal-card:nth-child(3) .arsenal-fr{background:linear-gradient(145deg,rgba(43,35,28,.78),rgba(5,7,10,.92)) !important}#pathways .arsenal-card:nth-child(4) .arsenal-fr{background:linear-gradient(145deg,rgba(47,29,39,.78),rgba(5,7,10,.92)) !important}#pathways .arsenal-card:nth-child(5) .arsenal-fr{background:linear-gradient(145deg,rgba(37,27,48,.80),rgba(5,7,10,.92)) !important}#pathways .arsenal-card:nth-child(6) .arsenal-fr{background:linear-gradient(145deg,rgba(31,46,43,.80),rgba(5,7,10,.92)) !important}
-#pathways .arsenal-card .arsenal-fr::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 84% 18%,rgba(224,35,28,.22),transparent 31%),linear-gradient(transparent 42%,rgba(4,6,9,.72));pointer-events:none;opacity:.8;transition:opacity .4s}
+#pathways .arsenal-card .arsenal-fr{height:100%;min-height:295px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;position:relative;border:1px solid rgba(223,231,224,.16);border-radius:3px;background:linear-gradient(145deg,rgba(28,43,48,.82),rgba(5,7,10,.94)) !important;box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 24px 70px -42px rgba(0,0,0,.95);transition:transform .5s var(--ease-out),border-color .35s,box-shadow .5s,background .5s}
+#pathways .arsenal-card:nth-child(2) .arsenal-fr{background:linear-gradient(145deg,rgba(28,37,55,.82),rgba(5,7,10,.94)) !important}
+#pathways .arsenal-card:nth-child(3) .arsenal-fr{background:linear-gradient(145deg,rgba(46,30,42,.82),rgba(5,7,10,.94)) !important}
+#pathways .arsenal-card .arsenal-fr::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 84% 18%,rgba(224,35,28,.24),transparent 34%),linear-gradient(transparent 36%,rgba(4,6,9,.76));pointer-events:none;opacity:.85;transition:opacity .4s}
 #pathways .arsenal-card .arsenal-fr::after{display:none}
-.arsenal-icon{position:absolute;top:22px;right:22px;width:46px;height:46px;color:var(--ember);opacity:.86;filter:drop-shadow(0 0 16px rgba(224,35,28,.34));transition:transform .5s var(--ease-out),color .35s}.arsenal-icon svg{width:100%;height:100%}
-#pathways .arsenal-card .card-lab{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:14px;padding:22px 22px 0}.arsenal-card .card-lab b{font-size:15px;line-height:1.18;letter-spacing:.08em}.arsenal-card .card-lab .jp{font-size:10px;color:var(--ember);letter-spacing:.22em}
-.arsenal-detail{position:relative;z-index:2;max-height:0;overflow:hidden;opacity:0;transform:translateY(8px);padding:0 22px;transition:max-height .55s var(--ease-out),opacity .4s,transform .55s var(--ease-out),padding .55s}.arsenal-detail p{margin:12px 0 0;color:#aebbb3;font-size:11px;line-height:1.55}.skill-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}.skill-pills span{padding:6px 8px;border:1px solid rgba(223,231,224,.18);border-radius:999px;background:rgba(3,6,9,.38);color:var(--bone-dim);font-size:9px;letter-spacing:.08em;line-height:1.1;white-space:nowrap}
-#pathways .arsenal-card .card-meta{margin:0;padding:12px 2px 0;color:var(--muted);font-size:9px;letter-spacing:.14em;text-transform:uppercase;transition:color .3s}
-#pathways .arsenal-card:hover .arsenal-fr,#pathways .arsenal-card:focus-visible .arsenal-fr,#pathways .arsenal-card.is-active .arsenal-fr{transform:translateY(-5px);border-color:rgba(224,35,28,.62);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 28px 72px -36px rgba(224,35,28,.24)}
-#pathways .arsenal-card:hover .arsenal-icon,#pathways .arsenal-card:focus-visible .arsenal-icon,#pathways .arsenal-card.is-active .arsenal-icon{transform:scale(1.08) rotate(-5deg);color:#ff7667}#pathways .arsenal-card:hover .arsenal-detail,#pathways .arsenal-card:focus-visible .arsenal-detail,#pathways .arsenal-card.is-active .arsenal-detail{max-height:185px;opacity:1;transform:none;padding-bottom:20px}#pathways .arsenal-card:hover .card-meta,#pathways .arsenal-card:focus-visible .card-meta,#pathways .arsenal-card.is-active .card-meta{color:var(--bone)}
-.cert-strip{margin-top:clamp(54px,8vh,96px);padding-top:22px;border-top:1px solid var(--line-soft)}.cert-label{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:10px;letter-spacing:.22em;text-transform:uppercase}.cert-label .dot{width:5px;height:5px;border-radius:50%;background:var(--vermilion);box-shadow:0 0 12px var(--vermilion)}.cert-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:20px}.cert-badge{display:flex;flex-direction:column;gap:8px;min-height:106px;padding:15px;border:1px solid rgba(223,231,224,.14);background:rgba(9,13,16,.58);color:var(--bone-dim);font-size:11px;line-height:1.35;transition:border-color .35s,transform .4s var(--ease-out),background .35s}.cert-badge:hover{border-color:rgba(224,35,28,.55);transform:translateY(-3px);background:rgba(31,17,20,.68)}.cert-badge b{display:inline-grid;place-items:center;width:30px;height:22px;border:1px solid rgba(224,35,28,.62);color:var(--ember);font-size:9px;letter-spacing:.08em}.cert-badge small{color:var(--muted);font-size:9px;line-height:1.35}
-@media(max-width:980px){#pathways .arsenal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cert-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:620px){#pathways .arsenal-grid{grid-template-columns:1fr;gap:13px}#pathways .arsenal-card .arsenal-fr{height:auto;min-height:224px}.cert-list{grid-template-columns:1fr}.cert-badge{min-height:0}}
+.arsenal-icon{position:absolute;top:22px;right:22px;width:46px;height:46px;color:var(--ember);opacity:.88;filter:drop-shadow(0 0 18px rgba(224,35,28,.38));transition:transform .5s var(--ease-out),color .35s}
+.arsenal-icon svg{width:100%;height:100%}
+#pathways .arsenal-card .card-lab{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:14px;padding:24px 22px 0}
+.arsenal-card .card-lab b{font-size:14px;line-height:1.24;letter-spacing:.07em;text-transform:uppercase}
+.arsenal-card .card-lab .jp{font-size:11px;color:var(--ember);letter-spacing:.22em;font-weight:500}
+.arsenal-detail{position:relative;z-index:2;max-height:0;overflow:hidden;opacity:0;transform:translateY(8px);padding:0 22px;transition:max-height .55s var(--ease-out),opacity .4s,transform .55s var(--ease-out),padding .55s}
+.arsenal-detail p{margin:12px 0 0;color:#b2beba;font-size:12px;line-height:1.6}
+.skill-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.skill-pills span{padding:5px 9px;border:1px solid rgba(223,231,224,.18);border-radius:999px;background:rgba(3,6,9,.52);color:var(--bone);font-size:9.5px;letter-spacing:.06em;line-height:1.15;white-space:nowrap;transition:border-color .25s,background .25s,color .25s}
+.skill-pills span:hover{border-color:rgba(224,35,28,.65);background:rgba(224,35,28,.18);color:#fff}
+#pathways .arsenal-card .card-meta{display:flex;justify-content:space-between;align-items:center;margin:0;padding:14px 2px 0;color:var(--muted);font-size:9px;letter-spacing:.14em;text-transform:uppercase;transition:color .3s}
+#pathways .arsenal-card:hover .arsenal-fr,#pathways .arsenal-card:focus-visible .arsenal-fr,#pathways .arsenal-card.is-active .arsenal-fr{transform:translateY(-6px);border-color:rgba(224,35,28,.65);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 30px 80px -34px rgba(224,35,28,.28)}
+#pathways .arsenal-card:hover .arsenal-icon,#pathways .arsenal-card:focus-visible .arsenal-icon,#pathways .arsenal-card.is-active .arsenal-icon{transform:scale(1.08) rotate(-4deg);color:#ff7667}
+#pathways .arsenal-card:hover .arsenal-detail,#pathways .arsenal-card:focus-visible .arsenal-detail,#pathways .arsenal-card.is-active .arsenal-detail{max-height:260px;opacity:1;transform:none;padding-bottom:22px}
+#pathways .arsenal-card:hover .card-meta,#pathways .arsenal-card:focus-visible .card-meta,#pathways .arsenal-card.is-active .card-meta{color:var(--bone)}
 
-/* ============================================================ contact actions */
-.nav-contact{margin-left:clamp(18px,2.6vw,42px);display:block;color:var(--bone);font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;transition:color .3s,transform .35s var(--ease-out)}.nav-contact:hover{color:var(--ember);transform:translateY(-2px)}
-.contact-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:760px;margin-top:clamp(42px,7vh,76px)}.contact-link{display:flex;flex-direction:column;gap:9px;padding:18px 20px;border:1px solid rgba(223,231,224,.16);background:rgba(8,12,15,.42);transition:transform .45s var(--ease-out),border-color .35s,background .35s}.contact-link:hover{transform:translateY(-4px);border-color:rgba(224,35,28,.62);background:rgba(34,18,21,.6)}.contact-link span{color:var(--ember);font-size:9px;letter-spacing:.22em;text-transform:uppercase}.contact-link b{color:var(--bone);font-size:13px;font-weight:400;letter-spacing:.04em;overflow-wrap:anywhere}.contact-link i{color:var(--muted);font-size:9px;font-style:normal;letter-spacing:.12em;text-transform:uppercase}
-@media(max-width:620px){.nav-contact{display:none}.contact-links{grid-template-columns:1fr;gap:10px;margin-top:34px}}
+.cert-strip{margin-top:clamp(54px,8vh,96px);padding-top:22px;border-top:1px solid var(--line-soft)}
+.cert-label{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:10px;letter-spacing:.22em;text-transform:uppercase}
+.cert-label .dot{width:5px;height:5px;border-radius:50%;background:var(--vermilion);box-shadow:0 0 12px var(--vermilion)}
+.cert-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:20px}
+.cert-badge{display:flex;flex-direction:column;gap:8px;min-height:106px;padding:15px;border:1px solid rgba(223,231,224,.14);background:rgba(9,13,16,.58);color:var(--bone-dim);font-size:11px;line-height:1.35;transition:border-color .35s,transform .4s var(--ease-out),background .35s}
+.cert-badge:hover{border-color:rgba(224,35,28,.55);transform:translateY(-3px);background:rgba(31,17,20,.68)}
+.cert-badge b{display:inline-grid;place-items:center;width:30px;height:22px;border:1px solid rgba(224,35,28,.62);color:var(--ember);font-size:9px;letter-spacing:.08em}
+.cert-badge small{color:var(--muted);font-size:9px;line-height:1.35}
+
+@media(max-width:960px){
+  #pathways .arsenal-grid{grid-template-columns:1fr;gap:18px}
+  .cert-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+  #pathways .arsenal-card .arsenal-fr{height:auto;min-height:230px}
+  #pathways .arsenal-card .arsenal-detail{max-height:none;opacity:1;transform:none;padding-bottom:18px}
+  .cert-list{grid-template-columns:1fr}
+  .cert-badge{min-height:0}
+}
+
+/* ============================================================ contact & navigation actions */
+.nav-actions{display:flex;align-items:center;gap:clamp(12px,1.8vw,24px);margin-left:clamp(16px,2.2vw,38px)}
+.nav-contact{display:inline-flex;align-items:center;gap:7px;color:var(--bone);font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;transition:color .3s,transform .35s var(--ease-out)}
+.nav-contact:hover{color:var(--ember);transform:translateY(-2px)}
+.nav-github svg{display:block}
+.nav-link-gh{display:none}
+.contact-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:880px;margin-top:clamp(42px,7vh,76px)}
+.contact-link{display:flex;flex-direction:column;gap:9px;padding:20px;border:1px solid rgba(223,231,224,.16);background:rgba(8,12,15,.48);transition:transform .45s var(--ease-out),border-color .35s,background .35s}
+.contact-link:hover{transform:translateY(-4px);border-color:rgba(224,35,28,.62);background:rgba(34,18,21,.65)}
+.contact-link span{color:var(--ember);font-size:9px;letter-spacing:.22em;text-transform:uppercase}
+.contact-link b{color:var(--bone);font-size:13px;font-weight:400;letter-spacing:.04em;overflow-wrap:anywhere}
+.contact-link i{color:var(--muted);font-size:9px;font-style:normal;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:820px){
+  .nav-link-gh{display:block}
+}
+@media(max-width:760px){
+  .contact-links{grid-template-columns:1fr;gap:10px;margin-top:34px}
+}
+@media(max-width:620px){
+  .nav-actions{display:none}
+}
 </style>
 </head>
 <body data-layout-hero="b" data-layout-story="b" data-layout-gallery="b"
@@ -952,12 +1047,21 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
     <span class="brand-tx"><b>ARYA KUMBHAR</b><i>DATA SCIENCE &amp; FULL-STACK ENGINEER</i></span>
   </a>
   <nav class="nav-links" id="navlinks">
-    <a class="nav-link" href="#gate" data-cursor><span>Work</span><span class="alt">01</span></a>
-    <a class="nav-link" href="#pathways" data-cursor><span>Arsenal</span><span class="alt">02</span></a>
-    <a class="nav-link" href="#lessons" data-cursor><span>Journey</span><span class="alt">03</span></a>
+    <a class="nav-link" href="#gate" data-cursor><span>Featured Systems</span><span class="alt">01</span></a>
+    <a class="nav-link" href="#pathways" data-cursor><span>Technical Arsenal</span><span class="alt">02</span></a>
+    <a class="nav-link" href="#lessons" data-cursor><span>Experience &amp; Journey</span><span class="alt">03</span></a>
     <a class="nav-link" href="#eternity" data-cursor><span>Connect</span><span class="alt">04</span></a>
+    <a class="nav-link nav-link-gh" href="https://github.com/Robot1508" target="_blank" rel="noopener noreferrer" data-cursor><span>GitHub</span><span class="alt">↗</span></a>
   </nav>
-  <a class="nav-contact" href="mailto:aryakumbhar1508@gmail.com" data-cursor aria-label="Email Arya Kumbhar">Email</a>
+  <div class="nav-actions">
+    <a class="nav-contact nav-github" href="https://github.com/Robot1508" target="_blank" rel="noopener noreferrer" data-cursor aria-label="GitHub Profile (Robot1508)">
+      <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor" aria-hidden="true">
+        <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/>
+      </svg>
+      <span>GitHub</span>
+    </a>
+    <a class="nav-contact" href="mailto:aryakumbhar1508@gmail.com" data-cursor aria-label="Email Arya Kumbhar">Email</a>
+  </div>
   <button class="nav-burger" aria-label="Menu" data-cursor><i></i><i></i></button>
 </header>
 
@@ -966,12 +1070,25 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
 <!-- ============================================================ hero -->
 <section class="hero" id="hero" data-cam="0">
   <div class="hero-top">
-    <div class="eyebrow" data-rv="fade"><span class="dot"></span> Chapter 00 — The Hidden Gate</div>
-    <h1 class="display h-hero">
-      <span class="mask-line"><span>ENGINEERING INTELLIGENCE</span></span>
-      <span class="mask-line"><span>INTO SCALABLE SYSTEMS</span></span>
-    </h1>
-    <p class="hero-sub body" data-rv="up">B.Tech CSE (Data Science) engineer specializing in full-stack platforms, geospatial analytics, and AI/LLM orchestration. Open-source contributor and GSSOC '26 Ambassador.</p>
+    <div class="hero-panel bg-black/50 backdrop-blur-md p-6 rounded-2xl border border-white/10 max-w-3xl" data-rv="up">
+      <div class="eyebrow" data-rv="fade"><span class="dot"></span> CHAPTER 00 — OVERVIEW</div>
+      <h1 class="display h-hero">
+        <span class="mask-line"><span>ENGINEERING INTELLIGENCE</span></span>
+        <span class="mask-line"><span>INTO SCALABLE SYSTEMS</span></span>
+      </h1>
+      <p class="hero-sub body" data-rv="up">B.Tech CSE (Data Science) engineer specializing in full-stack platforms, geospatial analytics, and AI/LLM orchestration. Open-source contributor and GSSOC '26 Ambassador.</p>
+      <div class="hero-actions" data-rv="up">
+        <a class="hero-btn hero-btn-primary" href="#work" data-cursor>
+          <span>View Work ↓</span>
+        </a>
+        <a class="hero-btn hero-btn-secondary" href="https://github.com/Robot1508" target="_blank" rel="noopener noreferrer" data-cursor>
+          <span>GitHub Profile ↗</span>
+        </a>
+        <a class="hero-btn hero-btn-tertiary" href="/resume.pdf" download="Arya_Kumbhar_Resume.pdf" target="_blank" rel="noopener noreferrer" data-cursor>
+          <span>Download Resume</span>
+        </a>
+      </div>
+    </div>
   </div>
 
   <div class="hero-spacer"></div>
@@ -980,22 +1097,20 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
     <div class="hero-cue" data-rv="fade"><span>Scroll to explore</span><span class="track"><i></i></span></div>
     <div class="chapters" id="chips">
       <div class="chip" data-chip="0" data-rv="up" data-cursor><span class="num">01</span>
-        <span class="tx"><b>Featured Works</b><p>AI, civic tech, analytics, and product systems built to move people forward.</p></span></div>
+        <span class="tx"><b>Featured Systems</b><p>Production AI, Multimodal ML &amp; Data Pipelines</p></span></div>
       <div class="chip" data-chip="1" data-rv="up" data-cursor><span class="num">02</span>
-        <span class="tx"><b>Technical Arsenal</b><p>Languages, data science, backend, frontend, cloud, and delivery craft.</p></span></div>
+        <span class="tx"><b>Technical Arsenal</b><p>Core Architecture, Intelligent Models &amp; Delivery</p></span></div>
       <div class="chip" data-chip="2" data-rv="up" data-cursor><span class="num">03</span>
-        <span class="tx"><b>Open Source Journey</b><p>Mentorship, programs, hackathons, and a steady practice of shipping.</p></span></div>
+        <span class="tx"><b>Experience &amp; Journey</b><p>Open-Source Mentorship, Engineering Roles &amp; Hackathons</p></span></div>
       <div class="chip" data-chip="3" data-rv="up" data-cursor><span class="num">04</span>
-        <span class="tx"><b>Let’s Connect</b><p>Open to full-stack, data engineering, and AI engineering opportunities.</p></span></div>
+        <span class="tx"><b>Connect</b><p>LET’S BUILD SCALABLE INTELLIGENCE</p></span></div>
     </div>
   </div>
 
-  <a class="peek" href="#pathways" data-view="3" data-rv="fade" data-cursor aria-label="Preview: Sanmon, before the bell">
-    <!-- data-frame, or the live view is blitted over the whole anchor and
-         runs on down behind the caption instead of stopping at the frame -->
+  <a class="peek" href="#pathways" data-view="3" data-rv="fade" data-cursor aria-label="Preview: Technical Arsenal in motion">
     <span class="peek-fr" data-frame></span>
     <span class="peek-play"><svg viewBox="0 0 22 22" fill="none"><path d="M8 5.6 16.4 11 8 16.4z" fill="#dfe7e0"/></svg></span>
-    <span class="peek-cap"><b class="jp">WORK</b><i>Featured systems — in motion</i></span>
+    <span class="peek-cap"><b class="jp">ARSENAL</b><i>Featured systems — in motion</i></span>
   </a>
 
   <div class="word-fb" aria-hidden="true">ARYA</div>
@@ -1007,6 +1122,7 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
 
 <!-- ============================================================ chapter I -->
 <section class="sec" id="gate" data-cam="1">
+  <span id="work" style="position:absolute; top:0; left:0; width:0; height:0; pointer-events:none;"></span>
   <!-- foreground: the wall arrives first, the pine at the edge, the grass last -->
   <div class="fg" data-fg="gate" aria-hidden="true">
     <span class="fg-el fg-wall" data-fg-in="left">
@@ -1020,15 +1136,18 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
     </span>
   </div>
   <div class="sec-head" data-rv="fade">
-    <span class="k"><b>01</b> — Featured Works</span><span class="rule"></span><span class="k jp">WORKS</span>
+    <span class="k"><b>01</b> — CHAPTER 01 — FEATURED SYSTEMS</span><span class="rule"></span><span class="k jp">SYSTEMS</span>
   </div>
   <div class="gate-grid">
-    <h2 class="display h-sec" data-rv="up">Building useful intelligence for the real world.</h2>
+    <div>
+      <h2 class="display h-sec" data-rv="up">FEATURED SYSTEMS</h2>
+      <p class="sec-subhead" data-rv="up">Production AI, Multimodal ML &amp; Data Pipelines</p>
+    </div>
     <div class="gate-copy">
       <p class="lead" data-rv="up">I build products where data, software, and human context meet — from civic platforms and healthcare tools to analytics pipelines and AI copilots.</p>
       <p class="body" data-rv="up">My work blends full-stack engineering with geospatial analytics, LLM orchestration, and open-source collaboration. Every system should be clear, resilient, and ready to scale.</p>
       <a class="arrowlink" href="#pathways" data-rv="fade" data-cursor>
-        <span>Explore the work</span>
+        <span>Explore the technical arsenal</span>
         <span class="ar"><svg viewBox="0 0 14 14" fill="none"><path d="M3 11 11 3M5 3h6v6" stroke="#dfe7e0" stroke-width="1.3"/></svg></span>
       </a>
     </div>
@@ -1040,11 +1159,141 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
     <div><b>∞</b><span>Problem-solving drive</span></div>
   </div>
   <div class="project-grid" data-rv="up">
-    <article class="project-card"><div class="project-top"><span class="project-index">01</span><span class="project-status">FLAGSHIP ML &amp; RESEARCH</span></div><div class="project-category">Multimodal Clinical Machine Learning &amp; Research</div><h3>Vitalsis — AI-Powered Sepsis Risk Prediction</h3><p>Clinical time-series multimodal predictive ML system for sepsis risk assessment. Features rigorous model validation, patient trajectory monitoring, and low-latency inference pipelines.</p><div class="project-impact">Core impact: Flagship clinical ML architecture for predictive healthcare modeling.</div><div class="badges"><span>Python</span><span>XGBoost</span><span>Random Forest</span><span>FastAPI</span><span>React</span></div></article>
-    <article class="project-card"><div class="project-top"><span class="project-index">02</span><span class="project-status">PRODUCTION AI ENGINEERING</span></div><div class="project-category">End-to-End AI &amp; Geospatial Platform</div><h3>CivicFlow / FixItHub — AI-Powered Civic Issue Management</h3><p>Full-stack civic platform featuring real-time geolocation tracking and serverless processing. Leverages generative AI via AWS Bedrock to cluster duplicate incident reports and prioritize community impact.</p><div class="project-impact">Core impact: Production-grade serverless cloud integration and real-world generative AI orchestration. Shortlisted for AI for Bharat.</div><div class="badges"><span>React</span><span>AWS Lambda</span><span>Supabase PostgreSQL</span><span>AWS Bedrock</span><span>Geolocation</span></div></article>
-    <article class="project-card"><div class="project-top"><span class="project-index">03</span><span class="project-status">COMPUTER VISION</span></div><div class="project-category">Applied Machine Learning &amp; Computer Vision</div><h3>EcoBot — Vision-Based Environmental Intelligence</h3><p>Environmental object detection and scene analysis engine trained on custom sustainability datasets. Delivers rapid inference pipelines and structured environmental intelligence metrics.</p><div class="project-impact">Core impact: Custom vision model fine-tuning, automated labeling pipelines, and edge deployment.</div><div class="badges"><span>YOLO11</span><span>Python</span><span>Next.js</span><span>Express</span><span>MongoDB</span></div></article>
-    <article class="project-card"><div class="project-top"><span class="project-index">04</span><span class="project-status">OPERATIONS RESEARCH</span></div><div class="project-category">Geospatial Data Science &amp; Algorithmic Optimization</div><h3>RouteRush — Intelligent Logistics &amp; Route Optimization</h3><p>Algorithmic logistics routing and fleet dispatch optimization engine. Models complex geospatial network topologies, delivery-variance constraints, and multi-stop TSP heuristics.</p><div class="project-impact">Core impact: Advanced algorithmic problem-solving and mathematical optimization.</div><div class="badges"><span>Python</span><span>Geospatial Algorithms</span><span>Haversine Distance</span><span>Optimization Solvers</span></div></article>
-    <article class="project-card"><div class="project-top"><span class="project-index">05</span><span class="project-status">DATA ENGINEERING &amp; ANALYTICS</span></div><div class="project-category">Relational Data Engineering &amp; Business Metrics</div><h3>Swiggy Order Intelligence — Food Delivery Business Analytics</h3><p>High-throughput analytical data pipeline and reporting system simulating order lifecycles, restaurant dispatch variance, geospatial delivery metrics, and platform revenue KPIs.</p><div class="project-impact">Core impact: 3NF normalized schema design, query optimization, and executive metric modeling.</div><div class="badges"><span>PostgreSQL</span><span>SQL</span><span>Python</span><span>B-Tree Indexing</span><span>CTEs</span><span>Window Functions</span></div></article>
+    <article class="project-card">
+      <div class="project-top">
+        <span class="project-index">01</span>
+        <span class="project-status">FLAGSHIP ML &amp; RESEARCH</span>
+        <div class="project-corner-links">
+          <a href="https://github.com/Robot1508/vitalsis" target="_blank" rel="noopener noreferrer" data-cursor aria-label="GitHub Repository" title="View Code ↗">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          </a>
+          <a href="https://github.com/Robot1508/vitalsis" target="_blank" rel="noopener noreferrer" data-cursor aria-label="Live Demo / Docs" title="Live Demo ↗">
+            <svg viewBox="0 0 14 14" fill="none" width="13" height="13"><path d="M3 11 11 3M5 3h6v6" stroke="currentColor" stroke-width="1.3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-category">Multimodal Clinical Machine Learning &amp; Research</div>
+      <h3>Vitalsis — AI-Powered Sepsis Risk Prediction</h3>
+      <p>Clinical time-series multimodal predictive ML system for sepsis risk assessment. Features rigorous model validation, patient trajectory monitoring, and low-latency inference pipelines.</p>
+      <div class="project-impact">Core impact: Flagship clinical ML architecture for predictive healthcare modeling.</div>
+      <div class="badges"><span>Python</span><span>XGBoost</span><span>Random Forest</span><span>FastAPI</span><span>React</span></div>
+      <div class="project-actions">
+        <a class="proj-action-btn proj-action-btn-gh" href="https://github.com/Robot1508/vitalsis" target="_blank" rel="noopener noreferrer" data-cursor>
+          <span>View Code ↗</span>
+        </a>
+        <a class="proj-action-btn proj-action-btn-demo" href="https://github.com/Robot1508/vitalsis" target="_blank" rel="noopener noreferrer" data-cursor>
+          <span>Live Demo ↗</span>
+        </a>
+      </div>
+    </article>
+    <article class="project-card">
+      <div class="project-top">
+        <span class="project-index">02</span>
+        <span class="project-status">PRODUCTION AI ENGINEERING</span>
+        <div class="project-corner-links">
+          <a href="https://github.com/Robot1508/civicflow" target="_blank" rel="noopener noreferrer" data-cursor aria-label="GitHub Repository" title="View Code ↗">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          </a>
+          <a href="https://github.com/Robot1508/civicflow" target="_blank" rel="noopener noreferrer" data-cursor aria-label="Live Demo / Docs" title="Live Demo ↗">
+            <svg viewBox="0 0 14 14" fill="none" width="13" height="13"><path d="M3 11 11 3M5 3h6v6" stroke="currentColor" stroke-width="1.3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-category">End-to-End AI &amp; Geospatial Platform</div>
+      <h3>CivicFlow / FixItHub — AI-Powered Civic Issue Management</h3>
+      <p>Full-stack civic platform featuring real-time geolocation tracking and serverless processing. Leverages generative AI via AWS Bedrock to cluster duplicate incident reports and prioritize community impact.</p>
+      <div class="project-impact">Core impact: Production-grade serverless cloud integration and real-world generative AI orchestration. Shortlisted for AI for Bharat.</div>
+      <div class="badges"><span>React</span><span>AWS Lambda</span><span>Supabase PostgreSQL</span><span>AWS Bedrock</span><span>Geolocation</span></div>
+      <div class="project-actions">
+        <a class="proj-action-btn proj-action-btn-gh" href="https://github.com/Robot1508/civicflow" target="_blank" rel="noopener noreferrer" data-cursor>
+          <span>View Code ↗</span>
+        </a>
+        <a class="proj-action-btn proj-action-btn-demo" href="https://github.com/Robot1508/civicflow" target="_blank" rel="noopener noreferrer" data-cursor>
+          <span>Live Demo ↗</span>
+        </a>
+      </div>
+    </article>
+    <article class="project-card">
+      <div class="project-top">
+        <span class="project-index">03</span>
+        <span class="project-status">COMPUTER VISION</span>
+        <div class="project-corner-links">
+          <a href="https://github.com/Robot1508/ecobot" target="_blank" rel="noopener noreferrer" data-cursor aria-label="GitHub Repository" title="View Code ↗">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          </a>
+          <a href="https://github.com/Robot1508/ecobot" target="_blank" rel="noopener noreferrer" data-cursor aria-label="Live Demo / Docs" title="Live Demo ↗">
+            <svg viewBox="0 0 14 14" fill="none" width="13" height="13"><path d="M3 11 11 3M5 3h6v6" stroke="currentColor" stroke-width="1.3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-category">Applied Machine Learning &amp; Computer Vision</div>
+      <h3>EcoBot — Vision-Based Environmental Intelligence</h3>
+      <p>Environmental object detection and scene analysis engine trained on custom sustainability datasets. Delivers rapid inference pipelines and structured environmental intelligence metrics.</p>
+      <div class="project-impact">Core impact: Custom vision model fine-tuning, automated labeling pipelines, and edge deployment.</div>
+      <div class="badges"><span>YOLO11</span><span>Python</span><span>Next.js</span><span>Express</span><span>MongoDB</span></div>
+      <div class="project-actions">
+        <a class="proj-action-btn proj-action-btn-gh" href="https://github.com/Robot1508/ecobot" target="_blank" rel="noopener noreferrer" data-cursor>
+          <span>View Code ↗</span>
+        </a>
+        <a class="proj-action-btn proj-action-btn-demo" href="https://github.com/Robot1508/ecobot" target="_blank" rel="noopener noreferrer" data-cursor>
+          <span>Live Demo ↗</span>
+        </a>
+      </div>
+    </article>
+    <article class="project-card">
+      <div class="project-top">
+        <span class="project-index">04</span>
+        <span class="project-status">OPERATIONS RESEARCH</span>
+        <div class="project-corner-links">
+          <a href="https://github.com/Robot1508/RouteRush" target="_blank" rel="noopener noreferrer" data-cursor aria-label="GitHub Repository" title="View Code ↗">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          </a>
+          <a href="https://github.com/Robot1508/RouteRush" target="_blank" rel="noopener noreferrer" data-cursor aria-label="Live Demo / Docs" title="Live Demo ↗">
+            <svg viewBox="0 0 14 14" fill="none" width="13" height="13"><path d="M3 11 11 3M5 3h6v6" stroke="currentColor" stroke-width="1.3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-category">Geospatial Data Science &amp; Algorithmic Optimization</div>
+      <h3>RouteRush — Intelligent Logistics &amp; Route Optimization</h3>
+      <p>Algorithmic logistics routing and fleet dispatch optimization engine. Models complex geospatial network topologies, delivery-variance constraints, and multi-stop TSP heuristics.</p>
+      <div class="project-impact">Core impact: Advanced algorithmic problem-solving and mathematical optimization.</div>
+      <div class="badges"><span>Python</span><span>Geospatial Algorithms</span><span>Haversine Distance</span><span>Optimization Solvers</span></div>
+      <div class="project-actions">
+        <a class="proj-action-btn proj-action-btn-gh" href="https://github.com/Robot1508/RouteRush" target="_blank" rel="noopener noreferrer" data-cursor>
+          <span>View Code ↗</span>
+        </a>
+        <a class="proj-action-btn proj-action-btn-demo" href="https://github.com/Robot1508/RouteRush" target="_blank" rel="noopener noreferrer" data-cursor>
+          <span>Live Demo ↗</span>
+        </a>
+      </div>
+    </article>
+    <article class="project-card">
+      <div class="project-top">
+        <span class="project-index">05</span>
+        <span class="project-status">DATA ENGINEERING &amp; ANALYTICS</span>
+        <div class="project-corner-links">
+          <a href="https://github.com/Robot1508/swiggy-order-intelligence" target="_blank" rel="noopener noreferrer" data-cursor aria-label="GitHub Repository" title="View Code ↗">
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          </a>
+          <a href="https://github.com/Robot1508/swiggy-order-intelligence" target="_blank" rel="noopener noreferrer" data-cursor aria-label="Live Demo / Docs" title="Architecture ↗">
+            <svg viewBox="0 0 14 14" fill="none" width="13" height="13"><path d="M3 11 11 3M5 3h6v6" stroke="currentColor" stroke-width="1.3"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-category">Relational Data Engineering &amp; Business Metrics</div>
+      <h3>Swiggy Order Intelligence — Food Delivery Business Analytics</h3>
+      <p>High-throughput analytical data pipeline and reporting system simulating order lifecycles, restaurant dispatch variance, geospatial delivery metrics, and platform revenue KPIs.</p>
+      <div class="project-impact">Core impact: 3NF normalized schema design, query optimization, and executive metric modeling.</div>
+      <div class="badges"><span>PostgreSQL</span><span>SQL</span><span>Python</span><span>B-Tree Indexing</span><span>CTEs</span><span>Window Functions</span></div>
+      <div class="project-actions">
+        <a class="proj-action-btn proj-action-btn-gh" href="https://github.com/Robot1508/swiggy-order-intelligence" target="_blank" rel="noopener noreferrer" data-cursor>
+          <span>View Code ↗</span>
+        </a>
+        <a class="proj-action-btn proj-action-btn-demo" href="https://github.com/Robot1508/swiggy-order-intelligence" target="_blank" rel="noopener noreferrer" data-cursor>
+          <span>Architecture ↗</span>
+        </a>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -1066,26 +1315,114 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
     </span>
   </div>
   <div class="sec-head" data-rv="fade">
-    <span class="k"><b>02</b> — Technical Arsenal</span><span class="rule"></span><span class="k jp">STACK</span>
+    <span class="k"><b>02</b> — CHAPTER 02 — TECHNICAL ARSENAL</span><span class="rule"></span><span class="k jp">STACK</span>
+  </div>
+  <div class="chapter-header-block" data-rv="up">
+    <h2 class="display h-sec">TECHNICAL ARSENAL</h2>
+    <p class="sec-subhead">Core Architecture, Intelligent Models &amp; Delivery</p>
   </div>
   <div class="cards arsenal-grid" id="cards">
-    <article class="card arsenal-card" data-rv="up" data-view="0" data-cursor tabindex="0" aria-label="Languages and Core skills">
-      <div class="card-fr arsenal-fr"><span class="arsenal-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M10 15 4 24l6 9M38 15l6 9-6 9M29 8 19 40" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="card-lab"><b>Languages &amp; Core</b><span class="jp">01</span></div><div class="arsenal-detail"><p>Algorithms, REST APIs, OOP, Systems &amp; Data Processing</p><div class="skill-pills"><span>Python</span><span>C++</span><span>SQL</span><span>JavaScript</span><span>REST APIs</span><span>OOP</span></div></div></div><div class="card-meta"><span>Code that moves data</span><span>01 / 06</span></div>
+    <!-- Pillar 01: MACHINE LEARNING & DATA -->
+    <article class="card arsenal-card" data-rv="up" data-view="0" data-cursor tabindex="0" aria-label="Pillar 01: Machine Learning and Data">
+      <div class="card-fr arsenal-fr">
+        <span class="arsenal-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M8 36L18 24L26 30L40 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="8" cy="36" r="3.5" fill="currentColor"/>
+            <circle cx="18" cy="24" r="3.5" fill="currentColor"/>
+            <circle cx="26" cy="30" r="3.5" fill="currentColor"/>
+            <circle cx="40" cy="12" r="3.5" fill="currentColor"/>
+            <path d="M18 24V14M26 30V40M8 36H4M40 12H44" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <div class="card-lab">
+          <b>MACHINE LEARNING &amp; DATA</b>
+          <span class="jp">01</span>
+        </div>
+        <div class="arsenal-detail">
+          <p>Statistical modeling, computer vision, and high-throughput data processing.</p>
+          <div class="skill-pills">
+            <span>Python</span>
+            <span>SQL</span>
+            <span>C++</span>
+            <span>Pandas</span>
+            <span>NumPy</span>
+            <span>Scikit-learn</span>
+            <span>XGBoost</span>
+            <span>YOLO</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-meta">
+        <span>MODELS WITH MEASURABLE SIGNAL</span>
+        <span>01 / 03</span>
+      </div>
     </article>
-    <article class="card arsenal-card" data-rv="up" data-view="1" data-cursor tabindex="0" aria-label="Data Science and Machine Learning skills">
-      <div class="card-fr arsenal-fr"><span class="arsenal-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 34 17 25l7 5 15-17" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="34" r="3" fill="currentColor"/><circle cx="17" cy="25" r="3" fill="currentColor"/><circle cx="24" cy="30" r="3" fill="currentColor"/><circle cx="39" cy="13" r="3" fill="currentColor"/></svg></span><div class="card-lab"><b>Data Science &amp; Machine Learning</b><span class="jp">02</span></div><div class="arsenal-detail"><p>Multimodal ML, Predictive Modeling, Time-Series &amp; Clinical Analytics</p><div class="skill-pills"><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>XGBoost</span><span>Random Forest</span></div></div></div><div class="card-meta"><span>Models with measurable signal</span><span>02 / 06</span></div>
+
+    <!-- Pillar 02: FULL-STACK & SYSTEMS -->
+    <article class="card arsenal-card" data-rv="up" data-view="1" data-cursor tabindex="0" aria-label="Pillar 02: Full-Stack and Systems">
+      <div class="card-fr arsenal-fr">
+        <span class="arsenal-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <rect x="6" y="8" width="36" height="12" rx="3" stroke="currentColor" stroke-width="2.2"/>
+            <rect x="6" y="24" width="36" height="12" rx="3" stroke="currentColor" stroke-width="2.2"/>
+            <path d="M12 14h4M12 30h4M24 14h12M24 30h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M24 20v4M14 20v4M34 20v4" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 2"/>
+          </svg>
+        </span>
+        <div class="card-lab">
+          <b>FULL-STACK &amp; SYSTEMS</b>
+          <span class="jp">02</span>
+        </div>
+        <div class="arsenal-detail">
+          <p>Scalable APIs, normalized relational databases, and modern reactive interfaces.</p>
+          <div class="skill-pills">
+            <span>FastAPI</span>
+            <span>PostgreSQL</span>
+            <span>React</span>
+            <span>Next.js</span>
+            <span>Node.js</span>
+            <span>Supabase</span>
+            <span>Tailwind CSS</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-meta">
+        <span>STRUCTURED FOR SCALE</span>
+        <span>02 / 03</span>
+      </div>
     </article>
-    <article class="card arsenal-card" data-rv="up" data-view="2" data-cursor tabindex="0" aria-label="Databases and Data Engineering skills">
-      <div class="card-fr arsenal-fr"><span class="arsenal-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><ellipse cx="24" cy="10" rx="14" ry="6" stroke="currentColor" stroke-width="2.2"/><path d="M10 10v13c0 3.3 6.3 6 14 6s14-2.7 14-6V10M10 23v13c0 3.3 6.3 6 14 6s14-2.7 14-6V23" stroke="currentColor" stroke-width="2.2"/></svg></span><div class="card-lab"><b>Databases &amp; Data Engineering</b><span class="jp">03</span></div><div class="arsenal-detail"><p>Scalable Schema Design &amp; High-Throughput Analytics Pipelines</p><div class="skill-pills"><span>PostgreSQL</span><span>Supabase</span><span>Firebase</span><span>3NF Normalization</span><span>CTEs</span><span>Window Functions</span><span>B-Tree Indexing</span><span>Geospatial Indexing</span></div></div></div><div class="card-meta"><span>Structured for scale</span><span>03 / 06</span></div>
-    </article>
-    <article class="card arsenal-card" data-rv="up" data-view="0" data-cursor tabindex="0" aria-label="Web and Backend Framework skills">
-      <div class="card-fr arsenal-fr"><span class="arsenal-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="5" y="8" width="38" height="28" rx="3" stroke="currentColor" stroke-width="2.2"/><path d="M5 16h38M12 12h.01M17 12h.01M22 12h.01M13 24l5 5 9-9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div class="card-lab"><b>Web &amp; Backend Frameworks</b><span class="jp">04</span></div><div class="arsenal-detail"><p>Full-Stack Microservices, Responsive UI, Immersive Visuals</p><div class="skill-pills"><span>React</span><span>FastAPI</span><span>Node.js</span><span>Express</span><span>Next.js</span><span>Tailwind CSS</span><span>Three.js / WebGL</span></div></div></div><div class="card-meta"><span>Interfaces that feel alive</span><span>04 / 06</span></div>
-    </article>
-    <article class="card arsenal-card" data-rv="up" data-view="1" data-cursor tabindex="0" aria-label="AI LLMs and Orchestration skills">
-      <div class="card-fr arsenal-fr"><span class="arsenal-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="7" stroke="currentColor" stroke-width="2.2"/><path d="M24 5v8M24 35v8M5 24h8M35 24h8M10.6 10.6l5.7 5.7M31.7 31.7l5.7 5.7M37.4 10.6l-5.7 5.7M16.3 31.7l-5.7 5.7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><div class="card-lab"><b>AI, LLMs &amp; Orchestration</b><span class="jp">05</span></div><div class="arsenal-detail"><p>Multi-Turn Autonomous Agents &amp; Civic/Sustainability Intelligence</p><div class="skill-pills"><span>LLM APIs</span><span>AWS Bedrock</span><span>Claude 3.5 Sonnet</span><span>Prompt Engineering</span><span>Context Caching</span><span>JSON Schema Validation</span><span>Agentforce</span></div></div></div><div class="card-meta"><span>Agents with context</span><span>05 / 06</span></div>
-    </article>
-    <article class="card arsenal-card" data-rv="up" data-view="2" data-cursor tabindex="0" aria-label="Cloud DevOps and Tools skills">
-      <div class="card-fr arsenal-fr"><span class="arsenal-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M14 34h22a8 8 0 0 0 1-15.9A13 13 0 0 0 12 16a9 9 0 0 0 2 18Z" stroke="currentColor" stroke-width="2.2"/><path d="M18 39h.01M24 39h.01M30 39h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span><div class="card-lab"><b>Cloud, DevOps &amp; Tools</b><span class="jp">06</span></div><div class="arsenal-detail"><p>Serverless Architectures &amp; Production Deployment Workflows</p><div class="skill-pills"><span>AWS Lambda</span><span>Google Cloud Platform</span><span>Git</span><span>GitHub CI/CD</span><span>Docker</span><span>Git Rebase / Bisect</span></div></div></div><div class="card-meta"><span>Ship, observe, improve</span><span>06 / 06</span></div>
+
+    <!-- Pillar 03: CLOUD, AI & DEPLOYMENT -->
+    <article class="card arsenal-card" data-rv="up" data-view="2" data-cursor tabindex="0" aria-label="Pillar 03: Cloud, AI and Deployment">
+      <div class="card-fr arsenal-fr">
+        <span class="arsenal-icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M14 34h20a8 8 0 0 0 1-15.9A13 13 0 0 0 12 16a9 9 0 0 0 2 18Z" stroke="currentColor" stroke-width="2.2"/>
+            <circle cx="24" cy="24" r="4" fill="currentColor"/>
+            <path d="M24 12V6M24 42v-6M12 24H6M42 24h-6M15 15l-4-4M37 37l-4-4M37 15l-4 4M15 37l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <div class="card-lab">
+          <b>CLOUD, AI &amp; DEPLOYMENT</b>
+          <span class="jp">03</span>
+        </div>
+        <div class="arsenal-detail">
+          <p>Serverless execution, multimodal AI orchestration, and automated delivery pipelines.</p>
+          <div class="skill-pills">
+            <span>AWS Lambda</span>
+            <span>Google Cloud</span>
+            <span>Gemini API</span>
+            <span>Vertex AI</span>
+            <span>Git / GitHub</span>
+            <span>Docker</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-meta">
+        <span>SHIP, OBSERVE, SCALE</span>
+        <span>03 / 03</span>
+      </div>
     </article>
   </div>
   <div class="cert-strip" data-rv="up"><div class="cert-label"><span class="dot"></span><span>Certifications &amp; badges</span></div><div class="cert-list"><span class="cert-badge"><b>SA</b>Salesforce Agentblazer Champion<small>Agentforce &amp; AI Agents</small></span><span class="cert-badge"><b>TDV</b>Tata Data Visualisation<small>Empowering Business with Effective Insights · Forage</small></span><span class="cert-badge"><b>AI</b>AI Appreciate Badge<small>CBSE &amp; Intel</small></span><span class="cert-badge"><b>GC</b>Google Cloud &amp; NVIDIA<small>Community Member</small></span></div></div>
@@ -1106,11 +1443,11 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
     </span>
   </div>
   <div class="sec-head" data-rv="fade">
-    <span class="k"><b>03</b> — Experience &amp; Open Source Journey</span><span class="rule"></span><span class="k jp">JOURNEY</span>
+    <span class="k"><b>03</b> — CHAPTER 03 — EXPERIENCE &amp; JOURNEY</span><span class="rule"></span><span class="k jp">JOURNEY</span>
   </div>
   <div class="cur-head">
-    <h2 class="display h-sec" data-rv="up">Five chapters of learning, shipping, and sharing.</h2>
-    <p class="body-lg" data-rv="up">A practical path through mentorship, internships, open-source programs, hackathons, and campus community building.</p>
+    <h2 class="display h-sec" data-rv="up">EXPERIENCE &amp; JOURNEY</h2>
+    <p class="body-lg sec-subhead" data-rv="up">Open-Source Mentorship, Engineering Roles &amp; Hackathons</p>
   </div>
   <div class="cur" id="cur">
     <div class="les" data-les="0" data-cursor><span class="k">01</span><h3>GSSOC 2026 Ambassador &amp; Contributor<em class="jp">OPEN SOURCE</em></h3><p>Mentored 8+ developers and authored PRs across open-source repositories using Git rebase and CI/CD pipelines.</p><span class="t">8+ mentees</span><i class="bar"></i></div>
@@ -1138,7 +1475,7 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
       <img src="secret-pathways-assets/foreground/png/sakura-branch.webp" alt="" width="1536" height="1024" loading="lazy" decoding="async">
     </span>
   </div>
-  <div class="eyebrow" data-rv="fade">Chapter 04 — Connect</div>
+  <div class="eyebrow" data-rv="fade">CHAPTER 04 — CONNECT</div>
   <h2 class="display" data-rv="up">LET’S BUILD SCALABLE INTELLIGENCE</h2>
   <p class="body-lg" data-rv="up">Open to full-stack, data engineering, and AI engineering opportunities.</p>
   <a class="cta" href="mailto:aryakumbhar1508@gmail.com" data-rv="fade" data-cursor>
@@ -1148,6 +1485,7 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
   <div class="contact-links" data-rv="up">
     <a class="contact-link" href="mailto:aryakumbhar1508@gmail.com" data-cursor><span>Email</span><b>aryakumbhar1508@gmail.com</b><i>Open your mail client ↗</i></a>
     <a class="contact-link" href="https://www.linkedin.com/in/arya-kumbhar-764891308" target="_blank" rel="noopener noreferrer" data-cursor><span>LinkedIn</span><b>arya-kumbhar-764891308</b><i>Open profile in a new tab ↗</i></a>
+    <a class="contact-link" href="https://github.com/Robot1508" target="_blank" rel="noopener noreferrer" data-cursor><span>GitHub</span><b>Robot1508</b><i>Explore repositories &amp; code ↗</i></a>
   </div>
 </section>
 
@@ -1174,15 +1512,15 @@ body[data-layout-footer="b"] .foot-base span:last-child{ text-align:right; }
       <p>Data science and full-stack engineering for products that need to think, scale, and serve people well.</p>
     </div>
     <div><h4>Navigate</h4><ul>
-      <li><a href="#gate" data-cursor>Featured Works</a></li>
+      <li><a href="#gate" data-cursor>Featured Systems</a></li>
       <li><a href="#pathways" data-cursor>Technical Arsenal</a></li>
-      <li><a href="#lessons" data-cursor>Journey</a></li>
+      <li><a href="#lessons" data-cursor>Experience &amp; Journey</a></li>
       <li><a href="#eternity" data-cursor>Connect</a></li>
     </ul></div>
     <div><h4>Elsewhere</h4><ul>
       <li><a href="mailto:aryakumbhar1508@gmail.com" data-cursor>Email</a></li>
       <li><a href="https://www.linkedin.com/in/arya-kumbhar-764891308" target="_blank" rel="noopener noreferrer" data-cursor>LinkedIn</a></li>
-      <li><a href="https://github.com/robot1508" target="_blank" rel="noreferrer" data-cursor>GitHub</a></li>
+      <li><a href="https://github.com/Robot1508" target="_blank" rel="noopener noreferrer" data-cursor>GitHub</a></li>
       <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Kolhapur%2C%20Maharashtra%2C%20India" target="_blank" rel="noreferrer" data-cursor>Kolhapur, India</a></li>
     </ul></div>
     <div><h4>Focus</h4><ul>
@@ -4149,6 +4487,75 @@ const $  = s => document.querySelector(s);
 const $$ = s => [].slice.call(document.querySelectorAll(s));
 const nav = $('#nav'), preEl = $('#pre'), preFill = $('#pre-fill'), prePct = $('#pre-pct');
 
+const FEATURED_PROJECTS = [
+  {
+    id: 'vitalsis',
+    index: '01',
+    status: 'FLAGSHIP ML & RESEARCH',
+    category: 'Multimodal Clinical Machine Learning & Research',
+    title: 'Vitalsis — AI-Powered Sepsis Risk Prediction',
+    description: 'Clinical time-series multimodal predictive ML system for sepsis risk assessment. Features rigorous model validation, patient trajectory monitoring, and low-latency inference pipelines.',
+    impact: 'Core impact: Flagship clinical ML architecture for predictive healthcare modeling.',
+    badges: ['Python', 'XGBoost', 'Random Forest', 'FastAPI', 'React'],
+    githubUrl: 'https://github.com/Robot1508/vitalsis',
+    liveUrl: 'https://github.com/Robot1508/vitalsis',
+    liveLabel: 'Live Demo ↗'
+  },
+  {
+    id: 'civicflow',
+    index: '02',
+    status: 'PRODUCTION AI ENGINEERING',
+    category: 'End-to-End AI & Geospatial Platform',
+    title: 'CivicFlow / FixItHub — AI-Powered Civic Issue Management',
+    description: 'Full-stack civic platform featuring real-time geolocation tracking and serverless processing. Leverages generative AI via AWS Bedrock to cluster duplicate incident reports and prioritize community impact.',
+    impact: 'Core impact: Production-grade serverless cloud integration and real-world generative AI orchestration. Shortlisted for AI for Bharat.',
+    badges: ['React', 'AWS Lambda', 'Supabase PostgreSQL', 'AWS Bedrock', 'Geolocation'],
+    githubUrl: 'https://github.com/Robot1508/civicflow',
+    liveUrl: 'https://github.com/Robot1508/civicflow',
+    liveLabel: 'Live Demo ↗'
+  },
+  {
+    id: 'ecobot',
+    index: '03',
+    status: 'COMPUTER VISION',
+    category: 'Applied Machine Learning & Computer Vision',
+    title: 'EcoBot — Vision-Based Environmental Intelligence',
+    description: 'Environmental object detection and scene analysis engine trained on custom sustainability datasets. Delivers rapid inference pipelines and structured environmental intelligence metrics.',
+    impact: 'Core impact: Custom vision model fine-tuning, automated labeling pipelines, and edge deployment.',
+    badges: ['YOLO11', 'Python', 'Next.js', 'Express', 'MongoDB'],
+    githubUrl: 'https://github.com/Robot1508/ecobot',
+    liveUrl: 'https://github.com/Robot1508/ecobot',
+    liveLabel: 'Live Demo ↗'
+  },
+  {
+    id: 'routerush',
+    index: '04',
+    status: 'OPERATIONS RESEARCH',
+    category: 'Geospatial Data Science & Algorithmic Optimization',
+    title: 'RouteRush — Intelligent Logistics & Route Optimization',
+    description: 'Algorithmic logistics routing and fleet dispatch optimization engine. Models complex geospatial network topologies, delivery-variance constraints, and multi-stop TSP heuristics.',
+    impact: 'Core impact: Advanced algorithmic problem-solving and mathematical optimization.',
+    badges: ['Python', 'Geospatial Algorithms', 'Haversine Distance', 'Optimization Solvers'],
+    githubUrl: 'https://github.com/Robot1508/RouteRush',
+    liveUrl: 'https://github.com/Robot1508/RouteRush',
+    liveLabel: 'Live Demo ↗'
+  },
+  {
+    id: 'swiggy-order-intelligence',
+    index: '05',
+    status: 'DATA ENGINEERING & ANALYTICS',
+    category: 'Relational Data Engineering & Business Metrics',
+    title: 'Swiggy Order Intelligence — Food Delivery Business Analytics',
+    description: 'High-throughput analytical data pipeline and reporting system simulating order lifecycles, restaurant dispatch variance, geospatial delivery metrics, and platform revenue KPIs.',
+    impact: 'Core impact: 3NF normalized schema design, query optimization, and executive metric modeling.',
+    badges: ['PostgreSQL', 'SQL', 'Python', 'B-Tree Indexing', 'CTEs', 'Window Functions'],
+    githubUrl: 'https://github.com/Robot1508/swiggy-order-intelligence',
+    liveUrl: 'https://github.com/Robot1508/swiggy-order-intelligence',
+    liveLabel: 'Architecture ↗'
+  }
+];
+window.FEATURED_PROJECTS = FEATURED_PROJECTS;
+
 function wireReveals() {
   splitHeadingWords();
   const groups = new Map();
@@ -4335,7 +4742,7 @@ function wireHeroExit() {
 function wireNav() {
   let last = 0;
   const rail = $('#rail');
-  const names = ['The Hidden Gate', 'Featured Works', 'Technical Arsenal', 'Experience & Open Source', 'Connect', 'Colophon'];
+  const names = ['Overview', 'Featured Systems', 'Technical Arsenal', 'Experience & Journey', 'Connect', 'Colophon'];
   SECS.forEach((s, i) => {
     const b = document.createElement('button');
     b.innerHTML = '<i></i>'; b.title = names[i] || '';
@@ -4370,12 +4777,13 @@ function wireNav() {
   links.forEach(link => link.addEventListener('click', closeMenu));
   addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
   addEventListener('resize', () => { if (vpW() > 820) closeMenu(); }, { passive:true });
-  /* Which chapter each link actually points at, read off its href. The old
-     rule was positional — link i lit for section i+1 — which silently assumed
-     one link per section in matching order. With five links over four chapters
-     every entry past the third lit for its neighbour: standing in Afterlight
-     highlighted Stories. Reading the destination cannot drift. */
-  const linkSec = links.map(l => SECS.indexOf(document.querySelector(l.getAttribute('href'))));
+  /* Which chapter each link actually points at, read off its href. Safe against external URLs. */
+  const linkSec = links.map(l => {
+    const href = l.getAttribute('href');
+    if (!href || !href.startsWith('#')) return -1;
+    const target = document.querySelector(href);
+    return target ? SECS.indexOf(target) : -1;
+  });
   window.addEventListener('scroll', () => {
     const y = scrollY;
     nav.classList.toggle('stuck', y > 40);
@@ -4408,6 +4816,18 @@ function wireFocus() {
   $$('[data-les]').forEach(el => {
     el.addEventListener('mouseenter', () => set(+el.dataset.les % 4));
     el.addEventListener('mouseleave', () => set(-1));
+  });
+  $$('.arsenal-card').forEach(c => {
+    c.addEventListener('click', () => {
+      const isAct = c.classList.contains('is-active');
+      $$('.arsenal-card').forEach(x => x.classList.remove('is-active'));
+      if (!isAct) c.classList.add('is-active');
+    });
+  });
+  $$('.proj-action-btn').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+    });
   });
 }
 

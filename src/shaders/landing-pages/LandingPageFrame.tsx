@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import React, { useEffect, useRef, useState, type CSSProperties } from "react";
 
 import {
   applyPageCustomization,
@@ -149,11 +149,12 @@ export function LandingPageFrame({
         {...(srcDoc ? { srcDoc } : { src: sourceUrl })}
         sandbox={srcDoc ? SRCDOC_FRAME_SANDBOX : URL_FRAME_SANDBOX}
         loading="eager"
-        onLoad={(event) => {
-          applyPageCustomization(event.currentTarget, customization);
-          postPageCustomization(event.currentTarget, customization);
-          applyBackgroundPresentation(event.currentTarget, backgroundCanvasSelector, backgroundVisualSelector);
-          applyScene?.(event.currentTarget);
+        onLoad={(event: React.SyntheticEvent) => {
+          const frame = event.currentTarget as HTMLIFrameElement;
+          applyPageCustomization(frame, customization);
+          postPageCustomization(frame, customization);
+          applyBackgroundPresentation(frame, backgroundCanvasSelector, backgroundVisualSelector);
+          applyScene?.(frame);
           setReady(true);
         }}
         style={{
