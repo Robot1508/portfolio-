@@ -41,5 +41,35 @@
   - Pillar 03: CLOUD, AI & DEPLOYMENT (AWS Lambda, Google Cloud, Gemini API, Vertex AI, Git / GitHub, Docker) — "SHIP, OBSERVE, SCALE" — "Serverless execution, multimodal AI orchestration, and automated delivery pipelines."
 - [x] Updated project dataset with `githubUrl` and `liveUrl` fields with exact casing (`RouteRush`: `https://github.com/Robot1508/RouteRush`).
 - [x] Rendered action bars in all 5 featured project cards with "View Code ↗" and "Live Demo ↗" / "Architecture ↗" with dark glassmorphic styling and isolated click handling.
-- [x] Configured direct GitHub navigation (`https://github.com/Robot1508`) in desktop navbar, mobile drawer, Chapter 04 connect strip, and footer ELSEWHERE links.
+## Official Resume Alignment
+
+- [x] Featured Systems (Chapter 01) updated to exact resume projects:
+  - 01: FixItHub — Civic Issue Reporting & Tracking Platform (React, AWS Lambda, AWS Bedrock Claude 3.5 Sonnet, Supabase PostgreSQL, https://github.com/Robot1508/FixIt-Hub)
+  - 02: Swiggy On-Demand Delivery Analytics Platform (PostgreSQL, Python, SQL, Geospatial Queries, Geospatial Indexing, https://github.com/Robot1508/swiggy-order-intelligence)
+  - 03: EcoBot — AI Sustainability Intelligence Engine (Python, LLM APIs, Prompt Orchestration, JSON, REST APIs, https://github.com/Robot1508/EcoBot)
+  - 04: Amazon E-Commerce Relational Schema & Analytics (PostgreSQL, SQL, 3NF, CTEs, Window Functions, B-Tree Indexing, https://github.com/Robot1508)
+  - 05: VoterSphere AI — Election Awareness Platform (Next.js, React, Tailwind CSS, AI/LLM APIs, https://github.com/Robot1508/votersphere-ai)
+- [x] Experience & Journey (Chapter 03) aligned strictly with resume roles:
+  - 01: GirlScript Summer of Code (GSSOC) 2026 — Contributor & Ambassador (5+ PRs merged, mentored 8+ junior developers, Git rebase & CI/CD)
+  - 02: Prodigy InfoTech — Web Development Intern (Dec 2025 – Apr 2026, responsive React/Tailwind components across 12+ pages, lazy loading)
+  - 03: Open-Source Programs — Contributor (Elite Coders, Code Social, Open Source Connect, NSoC, 15+ commits, Git bisect debugging)
+  - 04: Internshala Student Partner (ISP) — Remote (Aug 2026 – Present, campus community outreach, peer skill-building campaigns)
+  - 05: Echo DYPCET & E-Cell DYPCET — Management Coordinator & Team Member (Sep 2025 – Present, co-organized 3+ technical hackathons/events with 50+ participants)
+- [x] Chapter 02 renamed to **SKILLS**:
+  - Main Heading: `SKILLS`
+  - Eyebrow: `02 — CHAPTER 02 — SKILLS`
+  - Subtitle: `CORE TECHNOLOGIES & TOOLS`
+  - Navbar Link: `Skills` (alt index `02` -> `SKILLS 02`)
+  - Hero Chapter Chip: `02 Skills` with `CORE TECHNOLOGIES & TOOLS`
+  - Footer Navigation: `Skills`
+- [x] Top Navigation Bar Streamlining:
+  - Removed `GITHUB` and `EMAIL` action buttons from the right side of the navbar.
+  - Retained core chapter links: `Featured Systems` (`01`), `Skills` (`02`), `Experience & Journey` (`03`), `Connect` (`04`).
+  - Adjusted header layout (`justify-content: space-between`, `gap: clamp(20px, 2.8vw, 48px)`) for balanced spacing without awkward gaps.
+- [x] Equalized 3-Pillar Card Heights & Skills Spacing (Chapter 02):
+  - Container set to `grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch`.
+  - Cards set to `h-full flex flex-col justify-between` to ensure uniform vertical expansion.
+  - Middle skills chip container set to `flex flex-wrap gap-2 my-auto py-2 content-start min-h-[110px]` for consistent vertical spacing across all badge sets.
+  - Category tagline pinned to bottom: `mt-auto pt-3 border-t border-white/10 text-[10px] tracking-widest text-neutral-400 uppercase`.
+
 
